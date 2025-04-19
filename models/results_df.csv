@@ -1,0 +1,13 @@
+Model,Best Parameters,Best Score,Test Accuracy,Precision,Recall,F1 Score,Confusion Matrix,ROC AUC,Time Taken (seconds)
+Random Forest,"{'model__n_estimators': 200, 'model__min_samples_split': 2, 'model__max_depth': 10, 'model__class_weight': 'balanced'}",0.14818604520857404,0.6617501239464552,0.08904593639575972,0.6253101736972705,0.15589236003711723,"[[5087 2578]
+ [ 151  252]]",0.6938501033507662,139.45847129821777
+Logistic Regression,"{'model__penalty': 'l2', 'model__max_iter': 50, 'model__class_weight': 'balanced', 'model__C': 0.25}",0.12999190968370591,0.5744918195339613,0.07634228187919463,0.6774193548387096,0.13722040713747172,"[[4362 3303]
+ [ 130  273]]",0.666631865703894,5.542203903198242
+K-Nearest Neighbors (KNN),"{'model__weights': 'distance', 'model__n_neighbors': 3, 'model__algorithm': 'brute'}",0.03577162706152453,0.9355478433316807,0.10738255033557047,0.03970223325062035,0.057971014492753624,"[[7532  133]
+ [ 387   16]]",0.5501248788036238,354.2854268550873
+Gradient Boosting,"{'model__n_estimators': 300, 'model__max_depth': 7, 'model__learning_rate': 0.2}",0.029929701751055946,0.9436043629152207,0.12857142857142856,0.022332506203473945,0.03805496828752643,"[[7604   61]
+ [ 394    9]]",0.6545946173431811,488.479617357254
+Light Gradient Boosting Machine (LGBM),"{'model__subsample': 1.0, 'model__num_leaves': 50, 'model__n_estimators': 300, 'model__max_depth': -1, 'model__learning_rate': 0.2}",0.020152025781121453,0.9464551313832424,0.16279069767441862,0.017369727047146403,0.03139013452914798,"[[7629   36]
+ [ 396    7]]",0.6777047227334457,32.83144760131836
+XGBoost,"{'model__subsample': 0.7, 'model__n_estimators': 200, 'model__max_depth': 5, 'model__learning_rate': 0.1}",0.00921944486909517,0.9500495785820525,0.5,0.0024813895781637717,0.0049382716049382715,"[[7664    1]
+ [ 402    1]]",0.7106309657348102,15.54776120185852
