@@ -31,7 +31,7 @@ This project aims to predict the likelihood of a customer converting a motor ins
 
 1. **Go to project folder**:
    ```bash
-   cd MotorInsurance
+   cd motor-insurance-conversion
    ```
 
 2. **Create and activate a virtual environment (optional but recommended)**:
@@ -70,8 +70,8 @@ This project aims to predict the likelihood of a customer converting a motor ins
 ## Deliverables
 
 - Jupyter Notebook with full pipeline
-- `results_df.csv`: Performance comparison of all trained models
-- `Task.docx`: Problem statement and context
+- `models/results_df.csv`: Performance comparison of all trained models
+- `models/final_best_model.pkl`: Model with best results
 - Short summary and insights in the final notebook
 
 ---
