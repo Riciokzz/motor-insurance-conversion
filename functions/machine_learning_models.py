@@ -1,4 +1,4 @@
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -8,7 +8,7 @@ from lightgbm import LGBMClassifier
 ml_models = {
     'Logistic Regression': LogisticRegression(max_iter=1000, random_state=42),
     'Random Forest': RandomForestClassifier(random_state=42),
-    'Gradient Boosting': GradientBoostingClassifier(random_state=42),
+    'Histogram Gradient Boosting': HistGradientBoostingClassifier(random_state=42),
     "XGBoost": XGBClassifier(random_state=42),
     "K-Nearest Neighbors (KNN)": KNeighborsClassifier(),
     "Light Gradient Boosting Machine (LGBM)": LGBMClassifier(random_state=42),
@@ -17,9 +17,10 @@ ml_models = {
 ml_models_parameters = {
     'Logistic Regression': {
         'model__C': [0.01, 0.25, 0.75, 1, 1.25],
-        'model__penalty': ['l1', 'l2'],
+        'model__penalty': ['l1', 'l2', 'elasticnet'],
         'model__max_iter': [50, 100, 150],
-        'model__class_weight': ['balanced', None]
+        'model__class_weight': ['balanced', None],
+        'model__solver': ['liblinear', 'lbfgs', 'newton-cholesky']
     },
     'Random Forest': {
         'model__n_estimators': [100, 200, 300],
@@ -27,10 +28,11 @@ ml_models_parameters = {
         'model__min_samples_split': [2, 5, 10],
         'model__class_weight': ['balanced', None]
     },
-    'Gradient Boosting': {
-        'model__n_estimators': [100, 200, 300],
+    'Histogram Gradient Boosting': {
         'model__learning_rate': [0.01, 0.1, 0.2],
-        'model__max_depth': [3, 5, 7]
+        'model__max_iter': [100, 200],
+        'model__max_depth': [None, 3, 5, 7],
+        'model__l2_regularization': [0.0, 0.1, 1.0],
     },
     'XGBoost': {
         'model__n_estimators': [50, 100, 200, 300],

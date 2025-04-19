@@ -117,7 +117,7 @@ def cm_matrix(cm: np.ndarray, place: int, model_name: str, axes: np.ndarray) -> 
     # Flatten the axes to handle 2D grid
     flat_axes = axes.flatten()
 
-    sns.heatmap(cm, annot=True, cmap="Blues", fmt=".3g", ax=flat_axes[place], cbar=True)
+    sns.heatmap(cm, annot=True, cmap="Blues", fmt=".4g", ax=flat_axes[place], cbar=True)
     flat_axes[place].set_title(f"{model_name}")
     flat_axes[place].set_xlabel("Predicted Label")
     flat_axes[place].set_ylabel("True Label")
