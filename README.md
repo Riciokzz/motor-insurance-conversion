@@ -44,7 +44,6 @@ This project aims to predict the likelihood of a customer converting a motor ins
    ```bash
    pip install -r requirements.txt
    ```
-
 ---
 
 ## Running the Project
@@ -64,7 +63,6 @@ This project aims to predict the likelihood of a customer converting a motor ins
    - Model training with hyperparameter tuning
    - Evaluation and visualization of model performance
    - Business insights and recommendations
-
 ---
 
 ## Deliverables
@@ -73,5 +71,4 @@ This project aims to predict the likelihood of a customer converting a motor ins
 - `models/results_df.csv`: Performance comparison of all trained models
 - `models/final_best_model.pkl`: Model with best results
 - Short summary and insights in the final notebook
-
 ---
